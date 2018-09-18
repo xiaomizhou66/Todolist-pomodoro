@@ -1,0 +1,50 @@
+/* pages/setting/setting.wxss */
+/* 头像所在view样式 */
+
+.container{
+	padding:15px 10px;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /*  是设置align-items: center;图片会居中么，text-align: center;这样图片没有居中 */
+}
+
+/* 头像样式 */
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+/*  微信名样式*/
+.userinfo-nickname {
+  color: #aaa;
+  display: inline-block;
+  margin-left: -20rpx;
+  text-align: center;
+}
+
+
+.section{
+	margin-bottom: 10px;
+}
+.section_title{
+	font-size: 12px;
+	color:#999;
+}
+.section_check{
+	margin-right: 5px;
+}
+.section_tip{
+	display: block;
+	text-align: right;
+	color: #CEC9C9;
+	padding-bottom: 10px;
+}
+.section_body{
+	margin-top: 15px;
+}

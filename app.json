@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/history/history",
+    "pages/pomodoro/pomodoro",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#333333",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "liuxmooのToDoList",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "待办任务",
+        "iconPath": "src/images/2.png",
+        "selectedIconPath": "src/images/1.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史任务",
+        "iconPath": "src/images/4.png",
+        "selectedIconPath": "src/images/3.png"
+      },
+      {
+        "pagePath": "pages/pomodoro/pomodoro",
+        "text": "番茄钟",
+        "iconPath": "src/images/6.png",
+        "selectedIconPath": "src/images/5.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "设置",
+        "iconPath": "src/images/8.png",
+        "selectedIconPath": "src/images/7.png"
+      }
+    ],
+    "color": "#778899",
+    "selectedColor": "#673ab7",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "position": "bottom"
+  }
+}

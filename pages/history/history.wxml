@@ -1,0 +1,29 @@
+<!-- pages/history/history.wxml -->
+<view class="container">
+  <!-- 分类切换 -->
+  <view class="weui-title">任务历史记录</view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="weui-cells weui-cells_after-title">
+    <view wx:for="{{todolist}}" wx:for-item="item" wx:key="startAt" class="weui-cell" hidden="{{item.typeIndex!=activeIndex||!item.isFinish}}">
+      <view class="weui-cell__ft">
+        <text decode="nbsp">㊣&nbsp;&nbsp;</text>
+      </view>
+      <view class="weui-cell__bd">{{item.title}}
+        <!-- <view class="timeformat">开始时间:\t\t{{item.startAt}}结束时间:\t\t{{item.endAt}}</view> -->
+      </view>
+      <button class="weui-btn mini-btn" type="default" size="mini" bindtap="remove" data-index="{{index}}">
+        ☞删除
+      </button>
+    </view>
+  </view>
+</view>

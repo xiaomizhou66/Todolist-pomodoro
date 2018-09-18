@@ -1,0 +1,162 @@
+/* pages/pomodoro/pomodoro.wxss */
+view,
+sroll-view,
+swiper,
+icon,
+text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+input,
+picker,
+radio,
+slider,
+switch,
+action-sheet,
+modal,
+toast,
+loading,
+navigator,
+audio,
+image,
+video,
+map,
+canvas {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column; 
+  align-items: center;  这里是居中，是与felx配合使用的
+  justify-content: space-between; */
+  box-sizing: border-box;
+}
+
+page {
+  height: 100%;
+}
+
+/* 一、容器样式 */
+.pomodoro-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 1.1倒计时样式 */
+.timer {
+  position: relative;
+  display: flex;
+  flex: 2;
+  /* 空间占据为2份 */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #3197ed;
+  transition: all .5s;
+  background: url('http://pdehao3yf.bkt.clouddn.com/m557755ato.jpg') center no-repeat;
+  /*这个url还是需要方格引号，不然编辑器会认为是错误的，放个引号安全一些*/ 
+  z-index: 1;
+  padding: 10px 0;
+}
+
+/* 1.1.1两个圆的所在容器样式 */
+.timer-warp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  transition: all .3s;
+}
+
+/* 透明圆样式 */
+.timer_progress_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid #e77a7a;
+  opacity: .5;
+  border-radius: 50%;
+}
+
+.timer_progress {
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 180px;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+/* 两个圆的样式 */
+.timer_left {
+  left: 0;
+}
+
+.timer_right {
+  right: 0;
+}
+
+.timer_circle {
+  position: absolute;
+  top: 0;
+  width: 180px;
+  height: 180px;
+  border: 3px solid transparent;
+  /* 左右两个圆都做成透明的 */
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.timer_circle_left {
+  left: 0;
+  border-left: 3px solid rgb(218, 214, 16);
+  border-bottom: 3px solid rgb(218, 214, 16);
+  transform: rotate(45deg);
+}
+
+.timer_circle_right {
+  right: 0;
+  border-right: 3px solid rgb(218, 214, 16);
+  border-bottom: 3px solid rgb(218, 214, 16);
+  transform: rotate(-45deg);
+}
+
+/* 倒计时数字 */
+.timer_time {
+  font-size: 40px;
+  color: #fff;
+  font-weight: lighter;
+  transition: font-size .3s;
+}
+
+/* 二、输入框样式 */
+.inputtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /* 空间占据为1 份*/
+  padding-top: 10px;
+  transition: all .3s;
+  margin-left: 75rpx;
+  margin-right: 75rpx;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+.weui-input {
+  margin-top: 35rpx;
+  font-size: 16px;
+}

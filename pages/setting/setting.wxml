@@ -1,0 +1,50 @@
+<!-- pages/setting/setting.wxml -->
+<view class="container">
+  <!-- 获取头像昵称 -->
+  <view>
+    <view class="placeholder">
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          授权登录
+        </button>
+        <block wx:else class="userinfo-avatar-nickname">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 工作时常设置 -->
+  <view class="section panel">
+    <text class="section_title">工作时长(分钟)</text>
+    <view class="section_body">
+      <slider bindchange="changeWorkTime" show-value="true" min="5" max="60" value="{{workTime}}" left-icon="cancel" right-icon="success_no_circle" />
+    </view>
+  </view>
+  <!-- 休息时常设置 -->
+  <view class="section panel">
+    <text class="section_title">休息时长(分钟)</text>
+    <view class="section_body">
+      <slider bindchange="changeRestTime" show-value="true" min="2" max="30" value="{{restTime}}" left-icon="cancel" right-icon="success_no_circle" />
+    </view>
+  </view>
+  <!-- 主页背景设置 -->
+  <view class="section panel">
+    <view class="section_title">
+      <text>主页背景</text>
+    </view>
+    <view class="section_body">
+      <text bindtab="" class="section_tip">选择背景 ></text>
+    </view>
+  </view>
+  <!-- 铃声设置 -->
+  <view class="section panel">
+    <view class="section_title">
+      <switch class="section_check" type="checkbox" size="mini" checked bindchange="switch1Change" />
+      <text>启用铃声</text>
+    </view>
+    <view class="section_body">
+      <text bindtab="" class="section_tip">选择铃声 ></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+// /pages/tools.wxs
+
+ var foo = "'hello world' from tools.wxs";
+var bar = function (d) {
+  return d;
+}
+module.exports = {
+  FOO: foo,
+  bar: bar,
+};
+module.exports.msg = "some msg"; 
+
+//使用示例
+// page/index/index.wxml
+//<wxs src="./../common.wxs" module="common" />
+//<view> {{tools.msg}} </view>
+//<view> {{tools.bar(tools.FOO)}} </view>
+wx.getStorage({
+  key: 'key',
+  success: function (res) {
+    console.log(res.data)
+  }
+})

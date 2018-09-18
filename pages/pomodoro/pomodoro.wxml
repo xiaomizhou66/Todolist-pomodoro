@@ -1,0 +1,40 @@
+<!-- pages/pomodoro/pomodoro.wxml -->
+<view class="pomodoro-container">
+  <!-- 倒计时框 -->
+  <view class="timer">
+    <view class="timer-warp">
+      <view class="timer_progress_mask"></view>
+      <!-- 左圆 -->
+      <view class="timer_progress timer_left">
+        <view class="timer_circle timer_circle_left" style="transform: rotate({{leftDeg}}deg);"></view>
+      </view>
+      <!-- 右圆 -->
+      <view class="timer_progress timer_right">
+        <view class="timer_circle timer_circle_right" style="transform: rotate({{rightDeg}}deg);"></view>
+      </view>
+      <!-- 时间倒计时 -->
+      <text wx:if="{{WisRuning}}" class="timer_time">{{WremainTimeText}}</text>
+      <text wx:if="{{!WisRuning && RisRuning}}" class="timer_time">{{RremainTimeText}}</text>
+    </view>
+  </view>
+  <!-- 任务输入框 -->
+  <view class="inputtext">
+    <view class="show-inputtext" wx:if="{{WisRuning}}" animation="{{nameAnimation}}">
+      <view>
+        <text style="color:red;font-weight:bold;font-size:18px;">{{inputtext}}</text>
+      </view>
+      <view>正在进行中</view>
+      不要开小差去玩耍哦
+      <text style="color:yellow;font-weight:bold;font-size:18px;">☺</text>
+    </view>
+    <view class="show-inputtext" wx:elif="{{RisRuning}}" animation="{{nameAnimation}}">
+      可以休息啦(～￣▽￣)～
+    </view>
+    <view wx:else class="weui-cell__bd weui-cell__bd_in-select-before">
+      <text>Tip:使用步骤:设置页面→设置时间→使用番茄钟</text>
+      <text style="color:red;font-weight:bold;font-size:16px;">\n休息够了！开启我们的番茄钟有效率工作学习~</text>
+      <!-- 可以这样设置让提示文字在文本框中间placeholder-style="text-align:center" -->
+      <input class="weui-input" placeholder="输入任务" focus="true" value="{{inputtext}}" bindinput="inputText" bindconfirm="confirmInputText" />
+    </view>
+  </view>
+</view>

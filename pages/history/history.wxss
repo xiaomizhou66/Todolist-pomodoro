@@ -1,0 +1,34 @@
+/* pages/history/history.wxss */
+
+.placeholder {
+  margin: 20rpx 0;
+}
+
+/* 列表样式 */
+.weui-title {
+  text-align: center;
+  margin: 50rpx auto auto auto;
+  color: brown;
+}
+.weui-cells{
+  margin-top:90rpx;
+}
+/* .weui-cell{
+  padding: 10rpx  20rpx 10rpx 50rpx;
+} */
+.weui-tab__content {
+  padding-top: 60px;
+  text-align: center;
+}
+.weui-navbar{
+  background: rgb(162, 170, 127);
+}
+.weui-navbar__title{
+  color: white;
+}
+.weui-navbar__title:hover{
+ color: brown;
+}
+.weui-btn:first-child{
+  margin-top:16rpx;
+}

@@ -1,0 +1,45 @@
+/**index.wxss**/
+.container {
+  padding: 20rpx 0;
+}
+
+.placeholder {
+  margin: 20rpx 0;
+}
+
+/* 列表样式 */
+.weui-title {
+  text-align: center;
+  margin: 50rpx auto auto auto;
+  color: brown;
+}
+.weui-cells{
+  margin-top:90rpx;
+  font-size:12px;
+}
+/* .weui-cell{
+  padding: 10rpx  20rpx 10rpx 50rpx;
+} */
+.weui-tab__content {
+  padding-top: 60px;
+  text-align: center;
+}
+.weui-navbar{
+  background: rgb(101, 136, 165);
+}
+.weui-navbar__title{
+  color: white;
+}
+.weui-navbar__title:hover{
+ color: brown;
+}
+.weui-btn:first-child{
+  margin-top:16rpx;
+}
+button[size=mini]{
+  padding: 0px 1px;
+}
+.todo_title{
+color: brown;
+font-size:14px;
+}

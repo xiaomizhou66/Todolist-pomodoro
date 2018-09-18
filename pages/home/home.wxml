@@ -1,0 +1,51 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 输入框 -->
+  <view class="placeholder">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <!-- 选择分类 -->
+        <view class="weui-cell__hd" style="width: 105px">
+          <picker bindchange="bindlisttypeChange" value="{{typeIndex}}" range="{{listtypes}}">
+            <view class="weui-select">{{listtypes[typeIndex]}}</view>
+          </picker>
+        </view>
+        <!-- 输入框 -->
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+          <input class="weui-input" placeholder="添加待办" focus="true" bindinput="bindInput" value="{{inputvalue}}" bindconfirm="bindConfirm" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 分类切换 -->
+  <view class="weui-title">待办任务</view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == typeIndex ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="weui-cells weui-cells_after-title">
+    <view wx:for="{{todolist}}" wx:for-item="item" wx:key="startAt" class="weui-cell" hidden="{{item.typeIndex!=activeIndex||item.isFinish}}">
+      <view class="weui-cell__ft">
+        <text decode="nbsp">㊣&nbsp;&nbsp;</text>
+      </view>
+      <view class="weui-cell__bd">
+       <text class="todo_title"> {{item.title}}</text>
+        <view class="timeformat">开始时间:\t\t{{item.startAt}}</view>
+      </view>
+      <view class="weui-cell__ft">
+        <!-- 事件的传值，用 data-xxx="",xxx是自己起名，js中调用e.currentTarget.dataset.xxx 
+                "",里面可以直接是数据，也可以是{{动态数据}} -->
+        <button class="weui-btn mini-btn" type="warn" size="mini" bindtap="changeFinish" data-index="{{index}}">
+          ☞点击完成
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

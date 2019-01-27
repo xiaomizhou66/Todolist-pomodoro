@@ -22,7 +22,10 @@ $ git clone git@github.com:xiaomizhou66/Todolist-pomodoro.git
 ### 3.1 待办列表 Todolist
 
 待办列表有分类，分类添加待办。
+
 ![待](http://liuxmoo.foryung.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190127230959.jpg)
+![待](http://liuxmoo.foryung.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190127231225.jpg)
+
 
 
 

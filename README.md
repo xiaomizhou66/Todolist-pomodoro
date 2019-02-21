@@ -4,7 +4,7 @@
 微信扫码或微信小程序搜索，如下图。
 
 
-![tu](http://pdehao3yf.bkt.clouddn.com/6564636.png)
+![tu](http://liuxmoo.foryung.com/2222.jpg)
 
 ## 二、运行步骤
 
@@ -32,7 +32,7 @@ $ git clone git@github.com:xiaomizhou66/Todolist-pomodoro.git
 ### 3.2 番茄钟 Pomodoro
 
 设置自己的工作时间与休息时间。输入工作事项开始使用番茄钟，工作时间倒计时完毕播放音乐进入休息时间倒计时。倒计时完毕可以进入下一次工作与休息的倒计时项目。
-![待](http://pdehao3yf.bkt.clouddn.com/6787yhjn.png)
+
 
 
 Copyright (c) 2018-present, liuxmoo 小米粥
